@@ -21,17 +21,17 @@ require SRC . 'routes/admin.php';
 $match = $router->match();
 
 require SRC . 'includes/functions.php';
-// LogoutTimer();
+// logoutTimer();
 
 if (!empty($match['target'])) {
-    // checkAdmin($match, $router);
-    $_GET = array_merge($_GET, $match['params']);
-    $data = []; // Data to be sent to the view
-    require SRC . 'models/' . $match['target'] . 'Model.php';
-    require SRC . 'controllers/' . $match['target'] . 'Controller.php';
-    require SRC . 'views/' . $match['target'] . 'View.php';
+  // checkAdmin($match, $router);
+  $_GET = array_merge($_GET, $match['params']);
+  $data = []; // Data to be sent to the view
+  require SRC . 'models/' . $match['target'] . 'Model.php';
+  require SRC . 'controllers/' . $match['target'] . 'Controller.php';
+  require SRC . 'views/' . $match['target'] . 'View.php';// Require SRC . 'views/' . $match['target'] . 'View.php';
 } else {
-    // Display error page
-    header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
-    die;
+  // Display error page
+  header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
+  die;
 }
