@@ -1,7 +1,7 @@
-# Réécriture d'URL (apache qui fonctionne avec ça)
+# Rewrite URL
 RewriteEngine on
 
-# Remove and slash
+# Remove slash
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$1 [L,R=301]
 

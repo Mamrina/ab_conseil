@@ -6,6 +6,3 @@
   <title><?= $title; ?> | Alexandra Bily Conseil</title>
 </head>
 <body>
-  rhwdgbdwfbw
-</body>
-</html>

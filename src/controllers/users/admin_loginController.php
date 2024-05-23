@@ -1,11 +1,10 @@
 <?php
 
-if (!empty($_POST['email']) && !empty($_POST['pseudo']) && !empty($_POST['pwd'])) {
+if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
     $accessUser = checkUserAccess();
     if (!empty($accessUser)) {
         $_SESSION['user'] = [
             'id' => $accessUser->id,
-            'pseudo' => $accessUser->pseudo,
             'last_login' => date('Y-m-d H:i:s')
         ];
 
@@ -19,3 +18,4 @@ if (!empty($_POST['email']) && !empty($_POST['pseudo']) && !empty($_POST['pwd'])
         alert('Identifiants incorrects.', 'danger'); // Identifiants incorrects
     }
 }
+

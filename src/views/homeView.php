@@ -1,3 +1,3 @@
 <?php get_header('Accueil', 'public'); ?>
-
-hello
+fhdhtgs
+<?php get_footer(); ?>

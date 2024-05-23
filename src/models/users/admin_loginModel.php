@@ -7,7 +7,7 @@ function checkUserAccess()
 {
     try {
         global $db;
-        $sql = 'SELECT id, pwd, pseudo FROM users WHERE email = :email';
+        $sql = 'SELECT id, pwd FROM users WHERE email = :email';
         $query = $db->prepare($sql);
         $query->execute(['email' => $_POST['email']]);
 
@@ -20,8 +20,6 @@ function checkUserAccess()
         }
     } catch (PDOException $e) {
         if ($_ENV['DEBUG'] == 'true') {
-            // Si je suis en mode débug dump() -> (voir config -> database.php)
-            // dump($e->getMessage());
             die;
         } else {
             alert('Une erreur est survenue. Merci de réessayer plus tard.' . 'danger');
@@ -43,8 +41,6 @@ function saveLastLogin(string $userId)
         alert('Le mot de passe a bien été sauvegardé.', 'success');
     } catch (PDOException $e) {
         if ($_ENV['DEBUG'] == 'true') {
-            // Si je suis en mode débug dump() -> (voir config -> database.php)
-            // dump($e->getMessage());
             die;
         } else {
             alert('Une erreur est survenue. Merci de réessayer plus tard.' . 'danger');

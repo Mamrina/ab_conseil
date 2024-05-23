@@ -2,15 +2,11 @@
 
 <div class='d-flex align-items-center'>
     <form action="" method="POST" class="form-signin m-auto">
-        <img src="/public/images/logo_cinerina.png" alt="Cinérina">
+        <img src="" alt="">
         <h1 class="mb-3 text-center">Se connecter</h1>
         <div class="form-floating mb-3">
             <input type="email" name="email" class="form-control" placeholder="Email">
             <label for="floatingInput">Email</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" name="pseudo" class="form-control" placeholder="Pseudo">
-            <label for="floatingInput">Pseudo</label>
         </div>
         <div class="form-floating mb-3">
             <input type="password" name="pwd" class="form-control" placeholder="Mot de passe">
