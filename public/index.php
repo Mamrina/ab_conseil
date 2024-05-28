@@ -15,8 +15,8 @@ require SRC . 'includes/forms.php';
 
 $router = new AltoRouter();
 
-require SRC . 'routes/public.php';
 require SRC . 'routes/admin.php';
+require SRC . 'routes/public.php';
 
 $match = $router->match();
 // dump($match);

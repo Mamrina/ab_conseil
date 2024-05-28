@@ -7,3 +7,6 @@ dump($admin);
 
 // Users
 $router->map('GET|POST', $admin . '/connexion', 'users/admin_login', 'login');
+$router->map('GET|POST', $admin . '/utilisateurs', 'users/admin_listUsers', 'users');
+$router->map('GET|POST', $admin . '/mot-de-passe-oublie', '', 'lostPassword');
+

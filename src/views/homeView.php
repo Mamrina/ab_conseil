@@ -1,3 +1,3 @@
 <?php get_header('Accueil', 'public'); ?>
-fhdhtgs
+affiche ok
 <?php get_footer(); ?>

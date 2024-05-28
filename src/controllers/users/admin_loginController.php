@@ -12,10 +12,10 @@ if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
 
         // Création d'une session, utilisation de l'uuid
         alert('Vous êtes connecté.', 'success');
-        header('Location: ' . $router->generate('dashboard'));
+        header('Location: ' . $router->generate('users'));
         die;
     } else {
-        alert('Identifiants incorrects.', 'danger'); // Identifiants incorrects
+        alert('Identifiants incorrects.', 'danger');
     }
 }
 
