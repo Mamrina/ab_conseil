@@ -9,18 +9,18 @@
 // Check fields email and password
 function checkEmptyFields($field, $message = 'Veuillez renseigner cette information')
 {
-    $result = [
-        'class' => '',
-        'message' => ''
-    ];
+  $result = [
+    'class' => '',
+    'message' => ''
+  ];
 
-    if (isset($_POST[$field]) && empty($_POST[$field])) {
-        $result = [
-            'class' => 'is-invalid',
-            'message' => '<span class="invalid-feedback">' . $message . '</span>'
-        ];
-    }
-    return $result;
+  if (isset($_POST[$field]) && empty($_POST[$field])) {
+    $result = [
+      'class' => 'is-invalid',
+      'message' => '<span class="invalid-feedback">' . $message . '</span>'
+    ];
+  }
+  return $result;
 }
 
 /**
@@ -28,8 +28,8 @@ function checkEmptyFields($field, $message = 'Veuillez renseigner cette informat
  */
 function getValue(string $field): string
 {
-    if (isset($_POST[$field])) {
-        return $_POST[$field];
-    }
-    return '';
+  if (isset($_POST[$field])) {
+    return $_POST[$field];
+  }
+  return '';
 }
