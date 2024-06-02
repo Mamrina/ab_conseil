@@ -1,6 +1,7 @@
 <?php get_header('Mon compte utilisateur', 'admin'); ?>
 
-<div>
+<div class="container mb-4">
+  <div>
   <h2>Mon compte utilisateur</h2>
   <!-- <a href="<?= $router->generate('addUser'); ?>" class="btn btn-success">Ajouter un nouvel administrateur</a> -->
 </div>
@@ -22,5 +23,7 @@
     <?php } ?>
   </tbody>
 </table>
+</div>
+
 
 <?php get_footer('admin'); ?>

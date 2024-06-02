@@ -8,7 +8,7 @@ if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
     ];
     saveLastLogin($accessUser->id);
     alert('Vous êtes connecté.', 'success');
-    header('Location: ' . $router->generate('users'));
+    header('Location: ' . $router->generate('dashboard'));
     die;
   } else {
     alert('Identifiants incorrects.', 'danger');

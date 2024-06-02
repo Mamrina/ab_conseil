@@ -14,3 +14,9 @@ $router->map('GET|POST', $admin . '/utilisateurs', 'users/admin_users', 'users')
 $router->map('GET|POST', $admin . '/utilisateurs/editer', 'users/admin_edit', 'editUser');
 $router->map('GET|POST', $admin . '/utilisateurs/editer', 'users/admin_edit', 'addUser');
 $router->map('GET|POST', $admin . '/utilisateurs/supprimer', 'users/admin_delete', 'deleteUser');
+
+// Services
+$router->map('GET|POST', $admin . '/services', 'services/admin_listServices', 'listServices');
+$router->map('GET|POST', $admin . '/services/editer/[i:id]', 'services/admin_editServices', 'editService');
+$router->map('GET|POST', $admin . '/services/editer', 'services/admin_editServices', 'addService');
+$router->map('GET|POST', $admin . '/services/supprimer/[i:id]', 'services/admin_deleteServices', 'deleteService');
