@@ -10,7 +10,7 @@ $errorsMessageService = [
 ];
 
 if (!empty($_POST)) {
-    // Rules for movie title field
+    // Rules for service title field
     if (!empty($_POST['title'])) {
         if (checkExistServices($_POST['title'])) {
             $errorsMessageService['title'] = 'Ce service existe déjà !';

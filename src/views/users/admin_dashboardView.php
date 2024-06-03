@@ -2,12 +2,12 @@
 get_header('Dashboard', 'admin'); ?>
 
 <div class="container mb-4">
-  <h1>Bienvenue , que souhaitez-vous faire ?</h1>
+  <h1>Bienvenue Alexandra, que souhaitez-vous faire ?</h1>
   <nav>
     <ul>
-      <li><a href="<?= $router->generate('users'); ?>">Espace utilisateur</a></li>
-      <li><a href="<?= $router->generate('listServices'); ?>">Voir les services</a></li>
-      <li><a href="<?= $router->generate('shcedules'); ?>">Voir les horaires</a></li>
+      <li><a href="<?= $router->generate('users'); ?>">Mon compte</a></li>
+      <li><a href="<?= $router->generate('listServices'); ?>">Mes services</a></li>
+      <li><a href="<?= $router->generate('listNews'); ?>">Mon Blog</a></li>
   </ul>
   </nav>
 </div>

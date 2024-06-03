@@ -20,3 +20,9 @@ $router->map('GET|POST', $admin . '/services', 'services/admin_listServices', 'l
 $router->map('GET|POST', $admin . '/services/editer/[i:id]', 'services/admin_editServices', 'editService');
 $router->map('GET|POST', $admin . '/services/editer', 'services/admin_editServices', 'addService');
 $router->map('GET|POST', $admin . '/services/supprimer/[i:id]', 'services/admin_deleteServices', 'deleteService');
+
+// Blog
+$router->map('GET|POST', $admin . '/actualites', 'news/admin_listNews', 'listNews');
+$router->map('GET|POST', $admin . '/actualites/editer/[i:id]', 'news/admin_editNews', 'editNew');
+$router->map('GET|POST', $admin . '/actualites/editer', 'news/admin_editNews', 'addNew');
+$router->map('GET|POST', $admin . '/actualites/supprimer/[i:id]', 'news/admin_deleteNews', 'deleteNew');

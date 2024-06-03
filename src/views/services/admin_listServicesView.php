@@ -1,6 +1,7 @@
 <?php get_header('Liste des services', 'admin'); ?>
 
 <div class="container mb-4">
+<a href="<?= $router->generate('dashboard'); ?>">Retour</a>
   <h2 class="mb-10">Liste des services</h2>
   
   <a href="<?= $router->generate('addService'); ?>" class="btn btn-success">Ajouter un nouveau service</a>

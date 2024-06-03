@@ -9,6 +9,8 @@ define('SRC', '../src/');
 $dotenv = Dotenv\Dotenv::createImmutable('../src/config');
 $dotenv->load();
 
+session_start();
+
 // Delay login
 require SRC . 'config/database.php';
 require SRC . 'includes/forms.php';

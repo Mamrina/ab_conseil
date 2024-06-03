@@ -17,10 +17,13 @@
 				<div class="collapse navbar-collapse" id="navbarText">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
+							<a class="nav-link" href="<?= $router->generate('users'); ?>">Mon compte</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="<?= $router->generate('listServices'); ?>">Mes services</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Blog/Actualités</a>
+							<a class="nav-link" href="<?= $router->generate('listNews'); ?>">Mon blog</a>
 						</li>
 					</ul>
 					<div class="navbar-text">

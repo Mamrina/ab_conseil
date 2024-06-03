@@ -1,9 +1,9 @@
 <?php get_header('Mon compte utilisateur', 'admin'); ?>
 
 <div class="container mb-4">
+<a href="<?= $router->generate('dashboard'); ?>">Retour</a>
   <div>
   <h2>Mon compte utilisateur</h2>
-  <!-- <a href="<?= $router->generate('addUser'); ?>" class="btn btn-success">Ajouter un nouvel administrateur</a> -->
 </div>
 <table class="table table-striped table-hover">
   <thead>
