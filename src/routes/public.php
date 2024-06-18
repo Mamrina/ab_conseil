@@ -5,3 +5,5 @@
 
 // Home
 $router->map('GET|POST', '/', 'home', 'home');
+$router->map('GET|POST', '/a-propos-de-moi', 'about', 'about');
+$router->map('GET|POST', '/mes-services', 'services', 'services');

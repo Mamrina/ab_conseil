@@ -1,6 +1,5 @@
 <?php
 get_header('Dashboard', 'admin'); ?>
-
 <div class="container mb-4">
   <h1>Bienvenue Alexandra, que souhaitez-vous faire ?</h1>
   <nav>

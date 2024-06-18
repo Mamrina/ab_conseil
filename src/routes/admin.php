@@ -11,9 +11,9 @@ $router->map('GET|POST', $admin . '/deconnexion', 'users/admin_logout', 'logout'
 $router->map('GET|POST', $admin . '/mot-de-passe-oublie', '', 'lostPassword');
 $router->map('GET|POST', $admin . '/utilisateurs/tableau-de-bord', 'users/admin_dashboard', 'dashboard');
 $router->map('GET|POST', $admin . '/utilisateurs', 'users/admin_users', 'users');
-$router->map('GET|POST', $admin . '/utilisateurs/editer', 'users/admin_edit', 'editUser');
+$router->map('GET|POST', $admin . '/utilisateurs/editer/[i:id]', 'users/admin_edit', 'editUser');
 $router->map('GET|POST', $admin . '/utilisateurs/editer', 'users/admin_edit', 'addUser');
-$router->map('GET|POST', $admin . '/utilisateurs/supprimer', 'users/admin_delete', 'deleteUser');
+$router->map('GET|POST', $admin . '/utilisateurs/supprimer/[i:id]', 'users/admin_delete', 'deleteUser');
 
 // Services
 $router->map('GET|POST', $admin . '/services', 'services/admin_listServices', 'listServices');

@@ -1,5 +1,5 @@
 <?php get_header('Se connecter', 'login'); ?>
-
+<?= displayAlert(); ?>
 <div class='d-flex align-items-center'>
   <form action="" method="POST" class="form-signin m-auto">
     <img src="" alt="">

@@ -1,7 +1,8 @@
 <?php
-
 if (!empty($_GET['id']) && !empty(checkExistServices()->id)) {
-    deleteService();
+  deleteService();
+} else {
+  alert('Impossible de supprimer ce service.', 'danger');
 }
 header('Location: ' . $router->generate('listServices'));
 die;

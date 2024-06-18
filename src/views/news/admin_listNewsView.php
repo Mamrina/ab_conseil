@@ -20,8 +20,8 @@
         <tr>
           <td class="align-middle"><?= htmlentities($new->title); ?></td>
           <td class="align-middle"><?= htmlentities($new->content); ?></td>
-          <td class="align-middle"><?= htmlentities($new->created_at); ?></td>
-          <td class="align-middle"><?= htmlentities($new->modified_at); ?></td>
+          <td class="align-middle"><?= ($new->created_at); ?></td>
+          <td class="align-middle"><?= ($new->modified_at); ?></td>
           <td class="text-center align-middle">
             <a class="btn btn-warning" href="<?= $router->generate('editNew', ['id' =>  htmlentities($new->id)]); ?>">Editer</a>
             <a class="btn btn-danger" href="<?= $router->generate('deleteNew', ['id' =>  htmlentities($new->id)]); ?>">Supprimer</a>

@@ -23,11 +23,10 @@ function addPost(): bool
     $data = [
         'title' => $_POST['title'],
         'content' => $_POST['content'],
-        'created_at' => $_POST['created_at'],
-        'modified_at' => $_POST['modified_at']
+        'created_at' => date('Y-m-d H:i:s')
     ];
     try {
-        $sql = 'INSERT INTO news (title, content, created_at, modified_at) VALUES (:title, :content, :created_at, :modified_at)';
+        $sql = 'INSERT INTO news (title, content, created_at) VALUES (:title, :content, :created_at)';
         $query = $db->prepare($sql);
         $query->execute($data);
     } catch (PDOException $e) {
@@ -43,12 +42,11 @@ function updatePost(string $message)
     $data = [
         'title' => $_POST['title'],
         'content' => $_POST['content'],
-        'created_at' => $_POST['created_at'],
-        'modified_at' => $_POST['modified_at'],
+        'modified_at' => date('Y-m-d H:i:s'),
         'id' => $_GET['id']
     ];
     try {
-        $sql = 'UPDATE news SET title = :title, content = :content, created_at = :created_at, modified_at = :modified_at WHERE id = :id';
+        $sql = 'UPDATE news SET title = :title, content = :content, modified_at = :modified_at WHERE id = :id';
         $query = $db->prepare($sql);
         $query->execute($data);
     } catch (PDOException $e) {

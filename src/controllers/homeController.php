@@ -1,3 +1,3 @@
 <?php 
 
-// $data['services'] = getService();
+$data['services'] = getService();

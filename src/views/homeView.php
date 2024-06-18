@@ -1,3 +1,5 @@
 <?php get_header('Accueil', 'public'); ?>
-affiche ok
+<main>
+  
+</main>
 <?php get_footer(); ?>

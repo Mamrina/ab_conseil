@@ -3,9 +3,7 @@
 // Déclaration message d'erreur
 $errorsMessagePost = [
     'title' => false,
-    'content' => false,
-    'created_at' => false,
-    'modified_at' => false
+    'content' => false
 ];
 
 if (!empty($_POST)) {
@@ -19,7 +17,7 @@ if (!empty($_POST)) {
     }
 
     // Save news in database
-    if (!empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['created_at']) && !empty($_POST['modified_at'])) {
+    if (!empty($_POST['title']) && !empty($_POST['content'])) {
         if (!array_filter($errorsMessagePost)) {
             if (!empty($_GET['id'])) {
                 updatePost('L\'article a bien été modifié.');

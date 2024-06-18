@@ -6,7 +6,7 @@ function getUsers()
 {
   global $db;
 
-  $sql = 'SELECT id, email FROM users';
+  $sql = 'SELECT id, firstname, name, about_me, email FROM users';
   $query = $db->prepare($sql);
   $query->execute();
 
