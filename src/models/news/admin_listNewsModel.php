@@ -4,11 +4,11 @@
  */
 function getNews()
 {
-    global $db;
+  global $db;
 
-    $sql = 'SELECT id, title, content, created_at, modified_at FROM news';
-    $query = $db->prepare($sql);
-    $query->execute();
+  $sql = 'SELECT id, title, content, created_at, modified_at FROM news';
+  $query = $db->prepare($sql);
+  $query->execute();
 
-    return $query->fetchAll();
+  return $query->fetchAll();
 }

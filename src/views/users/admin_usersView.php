@@ -3,7 +3,7 @@
 <?= displayAlert(); ?>
 <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
   <div>
-  <h2>Mon compte administrateur</h2>
+  <h3>Mon compte administrateur</h3>
   <p>Pour modifier vos informations, cliquez sur 'Editer'.</p>
 </div>
 <table class="table table-striped table-hover">
@@ -11,7 +11,8 @@
     <tr>
       <th scope="col">Prénom</th>
       <th scope="col">Nom</th>
-      <th scope="col">A propos de moi</th>
+      <th scope="col">A propos</th>
+      <th scope="col">A propos plus</th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
         <td class="align-middle"><?= htmlentities($user->firstname); ?></td>
         <td class="align-middle"><?= htmlentities($user->name); ?></td>
         <td class="align-middle"><?= htmlentities($user->about_me); ?></td>
+        <td class="align-middle"><?= htmlentities($user->about_me_2); ?></td>
         <td class="text-center align-middle">
           <a class="btn btn-warning" href="<?= $router->generate('editUser', ['id' =>  htmlentities($user->id)]); ?>">Editer</a>
           <a class="btn btn-danger" href="<?= $router->generate('deleteUser', ['id' =>  htmlentities($user->id)]); ?>">Supprimer</a>

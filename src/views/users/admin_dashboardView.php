@@ -1,12 +1,13 @@
 <?php
 get_header('Dashboard', 'admin'); ?>
 <div class="container mb-4">
-  <h1>Bienvenue Alexandra, que souhaitez-vous faire ?</h1>
+  <h3 class="mb-5">Bienvenue Alexandra, que souhaitez-vous faire ?</h3>
   <nav>
-    <ul>
-      <li><a href="<?= $router->generate('users'); ?>">Mon compte</a></li>
-      <li><a href="<?= $router->generate('listServices'); ?>">Mes services</a></li>
-      <li><a href="<?= $router->generate('listNews'); ?>">Mon Blog</a></li>
+    <ul class="list-unstyled">
+      <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('users'); ?>">Mon compte</a></li>
+      <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('listServices'); ?>">Mes services</a></li>
+      <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('listSchedules'); ?>">Horaires et Contact</a></li>
+      <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('listNews'); ?>">Actualités</a></li>
   </ul>
   </nav>
 </div>

@@ -3,7 +3,7 @@
 
 <div class="container mb-4">
     <form action="" method="post" class="form-signin w-100 m-auto" enctype="multipart/form-data">
-        <h1 class="mb-5 fw-normal text-center">Ajouter un service</h1>
+        <h3 class="mb-5 fw-normal text-center">Ajouter un service</h3>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('title'); ?>
             <input type="text" name="title" value="<?= getValue('title'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
@@ -13,25 +13,25 @@
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('description'); ?>
             <input type="text" name="description" value="<?= getValue('description'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
-            <label for="text">Description *</label>
+            <label for="description">Description *</label>
             <?= $error['message']; ?>
         </div>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('duration'); ?>
             <input type="text" name="duration" value="<?= getValue('duration'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
-            <label for="text">Durée *</label>
+            <label for="duration">Durée *</label>
             <?= $error['message']; ?>
         </div>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('rates'); ?>
             <input type="text" name="rates" value="<?= getValue('rates'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
-            <label for="text">Tarif *</label>
+            <label for="rates">Tarif *</label>
             <?= $error['message']; ?>
         </div>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('location'); ?>
             <input type="text" name="location" value="<?= getValue('location'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
-            <label for="">Lieu *</label>
+            <label for="location">Lieu *</label>
             <?= $error['message']; ?>
         </div>
         <div>

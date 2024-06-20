@@ -1,9 +1,9 @@
 <?php get_header('Se connecter', 'login'); ?>
 <?= displayAlert(); ?>
-<div class='d-flex align-items-center'>
+<div class='d-flex align-items-center mt-5'>
   <form action="" method="POST" class="form-signin m-auto">
     <img src="" alt="">
-    <h1 class="mb-3 text-center">Se connecter</h1>
+    <h3 class="mb-3 text-center">Se connecter</h3>
     <div class="form-floating mb-3">
       <?php $error = checkEmptyFields('email'); ?>
       <input type="email" name="email" class="form-control <?= $error['class']; ?>" placeholder="Email">

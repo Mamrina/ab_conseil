@@ -1,7 +1,7 @@
 <?php
 get_header('Editer un utilisateur', 'admin'); ?>
 <div class="container mb-4">
-  <h1 class="mb-5">Modifier mes informations</h1>
+  <h3 class="mb-5">Modifier mes informations</h3>
   <form action="" method="post" class="form-signin w-100 m-auto novalidate">
   <div>
       <?php $error = checkEmptyFields('firstname'); ?>
@@ -19,10 +19,17 @@ get_header('Editer un utilisateur', 'admin'); ?>
     </div>
     <div>
     <?php $error = checkEmptyFields('about_me'); ?>
-      <label for="about_me" class="form-label">A propos de moi *</label>
+      <label for="about_me" class="form-label">A propos *</label>
       <textarea name="about_me" id="about_me" class="form-control <?= $error['class']; ?>"><?= getValue('about_me'); ?></textarea>
       <?= $error['message']; ?>
       <?= $errorsMessage['about_me']; ?>
+    </div>
+    <div>
+    <?php $error = checkEmptyFields('about_me_2'); ?>
+      <label for="about_me_2" class="form-label">A propos plus *</label>
+      <textarea name="about_me_2" id="about_me_2" class="form-control <?= $error['class']; ?>"><?= getValue('about_me_2'); ?></textarea>
+      <?= $error['message']; ?>
+      <?= $errorsMessage['about_me_2']; ?>
     </div>
     <div>
       <?php $error = checkEmptyFields('email'); ?>

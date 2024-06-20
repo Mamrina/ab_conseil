@@ -5,11 +5,11 @@
  */
 function getServices()
 {
-    global $db;
+  global $db;
 
-    $sql = 'SELECT id, title, description, duration, rates, location FROM services';
-    $query = $db->prepare($sql);
-    $query->execute();
+  $sql = 'SELECT id, title, description, duration, rates, location FROM services';
+  $query = $db->prepare($sql);
+  $query->execute();
 
-    return $query->fetchAll();
+  return $query->fetchAll();
 }

@@ -3,7 +3,7 @@
 $admin = '/' . $_ENV['ADMIN_FOLDER'];
 // dump($admin);
 
-$router->addMatchTypes(['uuid' => '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}']);
+// $router->addMatchTypes(['uuid' => '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}']);
 
 // Users
 $router->map('GET|POST', $admin . '/connexion', 'users/admin_login', 'login');
@@ -20,6 +20,13 @@ $router->map('GET|POST', $admin . '/services', 'services/admin_listServices', 'l
 $router->map('GET|POST', $admin . '/services/editer/[i:id]', 'services/admin_editServices', 'editService');
 $router->map('GET|POST', $admin . '/services/editer', 'services/admin_editServices', 'addService');
 $router->map('GET|POST', $admin . '/services/supprimer/[i:id]', 'services/admin_deleteServices', 'deleteService');
+
+// Schedules and Contact
+$router->map('GET|POST', $admin . '/horaires-et-contact', 'schedules/admin_listSchedules', 'listSchedules');
+$router->map('GET|POST', $admin . '/horaires-et-contact/editer/[i:id]', 'schedules/admin_editSchedules', 'editSchedule');
+$router->map('GET|POST', $admin . '/horaires-et-contact/editer', 'schedules/admin_editSchedules', 'addSchedule');
+$router->map('GET|POST', $admin . '/horaires-et-contact/supprimer/[i:id]', 'schedules/admin_deleteSchedules', 'deleteSchedule');
+
 
 // Blog
 $router->map('GET|POST', $admin . '/actualites', 'news/admin_listNews', 'listNews');

@@ -2,7 +2,7 @@
 <div class="container mb-4">
   <?= displayAlert(); ?>
 <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
-  <h2 class="mb-10">Liste des services</h2>
+  <h3 class="mb-10">Liste des services</h3>
   
   <a href="<?= $router->generate('addService'); ?>" class="btn btn-success">Ajouter un nouveau service</a>
   

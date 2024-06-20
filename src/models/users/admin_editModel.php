@@ -33,12 +33,13 @@ function addUser(string $message)
     'firstname' => $_POST['firstname'],
     'name' => $_POST['name'],
     'about_me' => $_POST['about_me'],
+    'about_me_2' => $_POST['about_me_2'],
     'email' => $_POST['email'],
     'pwd' => password_hash($_POST['pwd'], PASSWORD_DEFAULT)
 ];
 
 try {
-  $sql = 'INSERT INTO users (firstname, name, about_me, email, pwd) VALUES (:firstname, :name, :about_me, :email, :pwd)';
+  $sql = 'INSERT INTO users (firstname, name, about_me, about_me_2, email, pwd) VALUES (:firstname, :name, :about_me, :about_me_2, :email, :pwd)';
   $query = $db->prepare($sql);
   $query->execute($data);
   alert($message, 'success');
@@ -59,13 +60,14 @@ function updateUser(string $message) // $message = à 'Un utilisateur a bien ét
     'firstname' => $_POST['firstname'],
     'name' => $_POST['name'],
     'about_me' => $_POST['about_me'],
+    'about_me_2' => $_POST['about_me_2'],
     'email' => $_POST['email'],
     'pwd' => password_hash($_POST['pwd'], PASSWORD_DEFAULT),
     'id' => $_GET['id']
 ];
 
 try {
-  $sql = 'UPDATE users SET firstname = :firstname, name = :name, about_me = :about_me, email = :email, pwd = :pwd, modified_at = NOW() WHERE id = :id';
+  $sql = 'UPDATE users SET firstname = :firstname, name = :name, about_me = :about_me, about_me_2 = :about_me_2, email = :email, pwd = :pwd, modified_at = NOW() WHERE id = :id';
   $query = $db->prepare($sql);
   $query->execute($data);
   alert($message, 'success');
@@ -84,7 +86,7 @@ function getUser()
   global $db;
 
   try {
-    $sql = 'SELECT firstname, name, about_me, email FROM users WHERE id = :id';
+    $sql = 'SELECT firstname, name, about_me, about_me_2, email FROM users WHERE id = :id';
     $query = $db->prepare($sql);
     $query->execute(['id' => $_GET['id']]);
 

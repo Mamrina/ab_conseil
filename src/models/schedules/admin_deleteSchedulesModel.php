@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Delete a service from the database
+ * Delete a schedule from the database
  */
-function deleteService()
+function deleteSchedule()
 {
   try {
     global $db;
-    $sql = 'DELETE FROM services WHERE id = :id';
+    $sql = 'DELETE FROM schedules WHERE id = :id';
     $query = $db->prepare($sql);
     $query->execute(['id' => $_GET['id']]);
 
-    alert('Le service a bien été supprimé.', 'success');
+    alert('L\'horaire a bien été supprimé.', 'success');
   } catch (PDOException $e) {
     if ($_ENV['DEBUG'] == 'true') {
       die;
@@ -21,11 +21,11 @@ function deleteService()
   }
 }
 
-function checkExistServices()
+function checkExistSchedules()
 {
   try {
     global $db;
-    $sql = 'SELECT id FROM services WHERE id = :id';
+    $sql = 'SELECT id FROM schedules WHERE id = :id';
     $query = $db->prepare($sql);
     $query->execute(['id' => $_GET['id']]);
 
