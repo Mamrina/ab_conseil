@@ -1,33 +1,30 @@
 <?php get_header('Liste des articles de Blog', 'admin'); ?>
 
 <div class="container mb-4">
-<a href="<?= $router->generate('dashboard'); ?>">Retour</a>
-  <h3 class="mb-10">Liste des articles</h3>
+  <div class="mb-4">
+    <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
+  </div>
+  <div class="mb-4">
+    <h3>Liste des articles</h3>
+  </div>
+  <div class="mb-4">
+    <a href="<?= $router->generate('addNew'); ?>" class="btn btn-success">Ajouter un nouvel article</a>
+  </div>
   
-  <a href="<?= $router->generate('addNew'); ?>" class="btn btn-success">Ajouter un nouvel article</a>
-  
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Titre</th>
-        <th scope="col">Contenu</th>
-        <th scope="col">Posté le :</th>
-        <th scope="col">Modifié le :</th>
-        </tr>
-    </thead>
-    <thbody>
-      <?php foreach ($news as $new) { ?>
-        <tr>
-          <td class="align-middle"><?= htmlentities($new->title); ?></td>
-          <td class="align-middle"><?= htmlentities($new->content); ?></td>
-          <td class="align-middle"><?= ($new->created_at); ?></td>
-          <td class="align-middle"><?= ($new->modified_at); ?></td>
-          <td class="text-center align-middle">
-            <a class="btn btn-warning" href="<?= $router->generate('editNew', ['id' =>  htmlentities($new->id)]); ?>">Editer</a>
-            <a class="btn btn-danger" href="<?= $router->generate('deleteNew', ['id' =>  htmlentities($new->id)]); ?>">Supprimer</a>
-          </td>
-        </tr>
-      <?php } ?>
-    </thbody>
-  </table>
+  <?php foreach ($news as $new) { ?>
+    <div class="article-container mb-5 pb-5 border-bottom">
+      <h4 class="article-title"><?= htmlentities($new->title); ?></h4>
+      <div class="article-content"><?= nl2br(htmlentities($new->content)); ?></div>
+      <div class="article-dates">
+        <span>Posté le : <?= date('d/m/Y', strtotime($new->created_at)); ?></span>
+        <span>Modifié le : <?= date('d/m/Y', strtotime($new->modified_at)); ?></span>
+      </div>
+      <div class="article-actions mt-2">
+        <a class="btn btn-warning" href="<?= $router->generate('editNew', ['id' => htmlentities($new->id)]); ?>">Editer</a>
+        <a class="btn btn-danger" href="<?= $router->generate('deleteNew', ['id' => htmlentities($new->id)]); ?>">Supprimer</a>
+      </div>
+    </div>
+  <?php } ?>
 </div>
+
+<?php get_footer('admin'); ?>

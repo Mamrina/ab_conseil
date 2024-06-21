@@ -8,6 +8,7 @@
 </head>
 <body>
   <header>
-
-  
+    <div style="background-color: #3e467f; padding: 25px 0;">
+      <h1 class="text-center" style="color: #f7f1f1;">Alexandra Bily Conseil</h1>
+    </div>
   </header>

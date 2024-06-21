@@ -1,9 +1,6 @@
 <?php
 
 $admin = '/' . $_ENV['ADMIN_FOLDER'];
-// dump($admin);
-
-// $router->addMatchTypes(['uuid' => '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}']);
 
 // Users
 $router->map('GET|POST', $admin . '/connexion', 'users/admin_login', 'login');
@@ -26,6 +23,7 @@ $router->map('GET|POST', $admin . '/horaires-et-contact', 'schedules/admin_listS
 $router->map('GET|POST', $admin . '/horaires-et-contact/editer/[i:id]', 'schedules/admin_editSchedules', 'editSchedule');
 $router->map('GET|POST', $admin . '/horaires-et-contact/editer', 'schedules/admin_editSchedules', 'addSchedule');
 $router->map('GET|POST', $admin . '/horaires-et-contact/supprimer/[i:id]', 'schedules/admin_deleteSchedules', 'deleteSchedule');
+$router->map('GET|POST', $admin . '/formulaire-de-contact', 'contact/admin_listContact', 'listContact');
 
 
 // Blog

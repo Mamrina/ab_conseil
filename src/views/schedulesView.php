@@ -1,29 +1,33 @@
-<?php 
-get_header('Contact', 'public'); 
-$schedules = getSchedules()
-?>
+<?php get_header('Contact', 'public'); ?>
 
 <main>
   <div id="block-schedules">
-    <h3>contacte</h3>
+    <h4>contact</h4>
   </div>
   <section class="wrapper">
     <div class="formatting-text">
-      <p class="bold-italic">Horaires d'ouverture</p>
-      <ul>
-        <?php foreach ($schedules as $schedule): ?>
-          <li>
-            <p><?= htmlspecialchars($schedule['week_day']) . ' : ' . htmlspecialchars($schedule['morning_opening']) . ' - ' . htmlspecialchars($schedule['morning_close']); ?> et <?= htmlspecialchars($schedule['opening_afternoon']) . ' - ' . htmlspecialchars($schedule['closing_afternoon']); ?></p>
-          </li>
-        <?php endforeach; ?>
-      </ul>
+      <p>Pour toute demande de renseignement, contacter moi au 06 27 07 05 05 ou abily@alexandrabilyconseil.com</p>
     </div>
-  </section>
-  <section class="wrapper">
-    <div class="formatting-general">
-      <p>Veuillez remplir ce formulaire pour toute demande d'infomation ou demande de devis.</p>
-      <p>Les champs suivis d'une * sont obligatoires.</p>
-    </div>
+    <div class="schedule-location">
+      <div class="formatting-text">
+        <p class="bold-italic animate__animated animate__slideInLeft">Horaires d'ouverture</p>
+        <ul>
+          <?php foreach ($schedules as $schedule): ?>
+            <li>
+              <p><?= htmlspecialchars($schedule['week_day']) . ' : 
+              ' . htmlspecialchars($schedule['morning_opening']) . ' - 
+              ' . htmlspecialchars($schedule['morning_close']); ?> et 
+              <?= htmlspecialchars($schedule['opening_afternoon']) . ' - 
+              ' . htmlspecialchars($schedule['closing_afternoon']); ?></p>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+      <div class="formatting-text">
+        <p class="bold-italic animate__animated animate__slideInRight">Localisation</p>
+        <p>Urrugne, Hendaye, Ascain, Tarnos. <br>En distanciel, en France et à l'internationale.</p>
+      </div>
+    </div>  
   </section>
 </main>
 

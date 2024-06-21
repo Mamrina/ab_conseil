@@ -7,7 +7,7 @@ if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
       'last_login' => date('Y-m-d H:i:s')
     ];
     saveLastLogin($accessUser->id);
-    alert('Vous êtes connecté.', 'success');
+    alert('Vous êtes connectée.', 'success');
     header('Location: ' . $router->generate('dashboard'));
     die;
   } else {

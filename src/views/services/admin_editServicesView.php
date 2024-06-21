@@ -12,7 +12,7 @@
         </div>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('description'); ?>
-            <input type="text" name="description" value="<?= getValue('description'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
+            <textarea name="description" class="form-control <?= $error['class']; ?>" style="height: 300px; resize: vertical;" id="description" placeholder="Description *"><?= getValue('description'); ?></textarea>
             <label for="description">Description *</label>
             <?= $error['message']; ?>
         </div>

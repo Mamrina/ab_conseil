@@ -3,6 +3,6 @@
 // destroySession();
 
 unset($_SESSION['user']);
-alert('Vous êtes bien déconnecté de votre session !', 'success');
+alert('Déconnexion de votre session réussie !', 'success');
 header('Location:' . $router->generate('login'));
 die;

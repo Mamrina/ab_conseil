@@ -1,9 +1,15 @@
 <?php get_header('Liste des horaires et contact', 'admin'); ?>
 <div class="container mb-4">
-  <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
-  <h3 class="mb-10">Liste des horaires</h3>
-  <a href="<?= $router->generate('addSchedule'); ?>" class="btn btn-success">Ajouter un nouvel horaire</a>
-  <table class="table table-striped table-hover">
+  <div class="mt-5">
+    <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
+  </div>
+  <div class="mt-5">
+    <h3>Liste des horaires</h3>
+  </div>
+  <div class="mt-5">
+    <a href="<?= $router->generate('addSchedule'); ?>" class="btn btn-success">Ajouter un nouvel horaire</a>
+  </div>
+  <table class="table table-striped table-hover mt-5">
     <thead>
       <tr>
         <th scope="col">Jour</th>

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://kit.fontawesome.com/ad2e9db608.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
   <header>
@@ -23,7 +24,7 @@
             <a href="<?= $router->generate('services'); ?>">Mes services</a>
           </li>
           <li>
-            <a href="<?= $router->generate('schedules'); ?>">Contacte</a>
+            <a href="<?= $router->generate('schedules'); ?>">Contact</a>
           </li>
           <li>
             <a href="<?= $router->generate('news'); ?>">Actualités</a>

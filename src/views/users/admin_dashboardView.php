@@ -1,5 +1,7 @@
 <?php
-get_header('Dashboard', 'admin'); ?>
+get_header('Dashboard', 'admin'); 
+displayAlert()
+?>
 <div class="container mb-4">
   <h3 class="mb-5">Bienvenue Alexandra, que souhaitez-vous faire ?</h3>
   <nav>

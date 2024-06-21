@@ -10,7 +10,7 @@
     </div>
     <div class="form-floating mb-3">
       <?php $error = checkEmptyFields('content'); ?>
-      <textarea name="content" id="content" class="form-control <?= $error['class']; ?>" placeholder="#"><?= getValue('content'); ?></textarea>
+      <textarea name="content" id="content" class="form-control <?= $error['class']; ?>" style="height: 300px; resize: vertical;" placeholder="#"><?= getValue('content'); ?></textarea>
       <label for="content">Contenu *</label>
       <?= $error['message']; ?>
     </div>

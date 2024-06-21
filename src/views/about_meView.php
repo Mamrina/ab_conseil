@@ -1,8 +1,4 @@
-<?php
-get_header('Qui suis-je ?', 'public');
-$userId = 5;
-$aboutMeData = getAboutMe($userId);
-?>
+<?php get_header('Qui suis-je ?', 'public'); ?>
 
 <main>
   <div class="img-ab" id="picture-cover">
@@ -10,7 +6,7 @@ $aboutMeData = getAboutMe($userId);
   </div>
   <section class="wrapper">
     <div class="formatting-text">
-      <p class="bold-italic">À propos…</p>
+      <p class="bold-italic  animate__animated animate__slideInLeft">À propos…</p>
       <p><?= htmlspecialchars($aboutMeData['about_me']); ?></p>
       <p><?= htmlspecialchars($aboutMeData['about_me_2']); ?></p>
     </div>

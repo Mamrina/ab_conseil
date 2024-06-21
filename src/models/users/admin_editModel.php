@@ -32,6 +32,7 @@ function addUser(string $message)
   $data = [
     'firstname' => $_POST['firstname'],
     'name' => $_POST['name'],
+    'phone' => $_POST['phone'],
     'about_me' => $_POST['about_me'],
     'about_me_2' => $_POST['about_me_2'],
     'email' => $_POST['email'],
@@ -39,7 +40,7 @@ function addUser(string $message)
 ];
 
 try {
-  $sql = 'INSERT INTO users (firstname, name, about_me, about_me_2, email, pwd) VALUES (:firstname, :name, :about_me, :about_me_2, :email, :pwd)';
+  $sql = 'INSERT INTO users (firstname, name, phone, about_me, about_me_2, email, pwd) VALUES (:firstname, :name, :phone, :about_me, :about_me_2, :email, :pwd)';
   $query = $db->prepare($sql);
   $query->execute($data);
   alert($message, 'success');
@@ -59,6 +60,7 @@ function updateUser(string $message) // $message = à 'Un utilisateur a bien ét
   $data = [
     'firstname' => $_POST['firstname'],
     'name' => $_POST['name'],
+    'phone' => $_POST['phone'],
     'about_me' => $_POST['about_me'],
     'about_me_2' => $_POST['about_me_2'],
     'email' => $_POST['email'],
@@ -67,7 +69,7 @@ function updateUser(string $message) // $message = à 'Un utilisateur a bien ét
 ];
 
 try {
-  $sql = 'UPDATE users SET firstname = :firstname, name = :name, about_me = :about_me, about_me_2 = :about_me_2, email = :email, pwd = :pwd, modified_at = NOW() WHERE id = :id';
+  $sql = 'UPDATE users SET firstname = :firstname, name = :name, phone = :phone, about_me = :about_me, about_me_2 = :about_me_2, email = :email, pwd = :pwd, modified_at = NOW() WHERE id = :id';
   $query = $db->prepare($sql);
   $query->execute($data);
   alert($message, 'success');
@@ -86,7 +88,7 @@ function getUser()
   global $db;
 
   try {
-    $sql = 'SELECT firstname, name, about_me, about_me_2, email FROM users WHERE id = :id';
+    $sql = 'SELECT firstname, name, phone, about_me, about_me_2, email FROM users WHERE id = :id';
     $query = $db->prepare($sql);
     $query->execute(['id' => $_GET['id']]);
 

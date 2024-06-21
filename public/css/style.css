@@ -21,6 +21,10 @@ a {
   display: inline-block;
 }
 
+h3 {
+  margin-bottom: 10px;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 100%;
@@ -129,7 +133,7 @@ a {
 
 .formatting-text p {
   padding-bottom: 20px;
-  width: 70%;
+  /* width: 70%; */
   line-height: 30px;
   margin: auto;
 }
@@ -137,6 +141,7 @@ a {
 .bold-italic {
   font-weight: bold;
   font-style: italic;
+  font-size: 1.5rem;
 }
 
 .button-center {
@@ -149,7 +154,7 @@ a {
 .block-color {
   color: #f7f1f1;
   background-color: #3e467f;
-  padding: 50px 0;
+  padding: 50px;
 }
 
 /******************/
@@ -196,7 +201,7 @@ a {
 #block-services {
   background-color: #3e467f;
   color: #f7f1f1;
-  text-transform: capitalize  ;
+  text-transform: uppercase  ;
   padding: 50px 0;
   margin-bottom: 50px;
   font-size: 2rem;
@@ -214,15 +219,52 @@ a {
   margin-bottom: 20px;
 }
 
+.nav-services {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  border: 2px solid #3e467f;
+  padding: 30px;
+}
+
+.position-button {
+  text-align: center;
+}
+
 /*********************/
 /***** SCHEDULES *****/
 
 #block-schedules {
   background-color: #3e467f;
   color: #f7f1f1;
-  text-transform: capitalize  ;
+  text-transform: uppercase  ;
   padding: 50px 0;
   margin-bottom: 50px;
   font-size: 2rem;
   text-align: center;
+}
+
+.schedule-location {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/****************/
+/***** NEWS *****/
+
+#block-news {
+  background-color: #3e467f;
+  color: #f7f1f1;
+  text-transform: uppercase  ;
+  padding: 50px 0;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.mini {
+  font-size: 0.8rem;
+  font-style: italic;
 }

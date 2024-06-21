@@ -1,0 +1,2 @@
+<?php
+$schedules = getSchedules();

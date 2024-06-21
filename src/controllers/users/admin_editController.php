@@ -12,6 +12,7 @@ function checkEmail (string $email): bool
 $errorsMessage = [
   'firstname' => false,
   'name' => false,
+  'phone' => false,
   'about_me' => false,
   'about_me_2' => false,
   'email' => false,
@@ -39,8 +40,8 @@ if (!empty($_POST)) {
   }
 
   // Save user in database
-  if (!empty($_POST['firstname']) && !empty($_POST['name']) && !empty($_POST['about_me']) && !empty($_POST['about_me_2']) && !empty($_POST['email']) && !empty($_POST['pwd']) && !empty($_POST['pwdConfirm'])) {
-    if (!$errorsMessage['firstname'] && !$errorsMessage['name'] && !$errorsMessage['about_me'] && !$errorsMessage['about_me_2'] && !$errorsMessage['email'] && !$errorsMessage['pwd'] && !$errorsMessage['pwdConfirm']) {
+  if (!empty($_POST['firstname']) && !empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['about_me']) && !empty($_POST['about_me_2']) && !empty($_POST['email']) && !empty($_POST['pwd']) && !empty($_POST['pwdConfirm'])) {
+    if (!$errorsMessage['firstname'] && !$errorsMessage['name'] && !$errorsMessage['phone'] && !$errorsMessage['about_me'] && !$errorsMessage['about_me_2'] && !$errorsMessage['email'] && !$errorsMessage['pwd'] && !$errorsMessage['pwdConfirm']) {
       if (!empty($_GET['id'])) {
         updateUser('Vos modifications ont bien étés prises en compte.', 'success');
       } 

@@ -1,35 +1,27 @@
 <?php get_header('Liste des services', 'admin'); ?>
+
 <div class="container mb-4">
-  <?= displayAlert(); ?>
-<a href="<?= $router->generate('dashboard'); ?>">Retour</a>
-  <h3 class="mb-10">Liste des services</h3>
+  <div>
+    <a href="<?= $router->generate('dashboard'); ?>" class="mb-5">Retour</a>
+  </div>
+  <h3 class="mt-5">Liste des services</h3>
+  <div class="mt-5">
+    <a href="<?= $router->generate('addService'); ?>" class="btn btn-success">Ajouter un nouveau service</a>
+  </div>
   
-  <a href="<?= $router->generate('addService'); ?>" class="btn btn-success">Ajouter un nouveau service</a>
-  
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Titre</th>
-        <th scope="col">Description</th>
-        <th scope="col">Durée</th>
-        <th scope="col">Tarif</th>
-        <th scope="col">Lieu</th>
-        </tr>
-    </thead>
-    <thbody>
-      <?php foreach ($services as $service) { ?>
-        <tr>
-          <td class="align-middle"><?= htmlentities($service->title); ?></td>
-          <td class="align-middle"><?= htmlentities($service->description); ?></td>
-          <td class="align-middle"><?= htmlentities($service->duration); ?></td>
-          <td class="align-middle"><?= htmlentities($service->rates); ?></td>
-          <td class="align-middle"><?= htmlentities($service->location); ?></td>
-          <td class="text-center align-middle">
-            <a class="btn btn-warning" href="<?= $router->generate('editService', ['id' =>  htmlentities($service->id)]); ?>">Editer</a>
-            <a class="btn btn-danger" href="<?= $router->generate('deleteService', ['id' =>  htmlentities($service->id)]); ?>">Supprimer</a>
-          </td>
-        </tr>
-      <?php } ?>
-    </thbody>
-  </table>
+  <?php foreach ($services as $service) { ?>
+    <div class="service-block mt-5 pb-5 border-bottom">
+      <h4><?= htmlentities($service->title); ?></h4>
+      <p><?= nl2br(htmlentities($service->description)); ?></p>
+      <p><strong>Durée :</strong> <?= htmlentities($service->duration); ?></p>
+      <p><strong>Tarif :</strong> <?= htmlentities($service->rates); ?></p>
+      <p><strong>Lieu :</strong> <?= htmlentities($service->location); ?></p>
+      <div class="action-buttons">
+        <a href="<?= $router->generate('editService', ['id' => htmlentities($service->id)]); ?>" class="btn btn-warning">Editer</a>
+        <a href="<?= $router->generate('deleteService', ['id' => htmlentities($service->id)]); ?>" class="btn btn-danger">Supprimer</a>
+      </div>
+    </div>
+  <?php } ?>
 </div>
+
+<?php get_footer('admin'); ?>
