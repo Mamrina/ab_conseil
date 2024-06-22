@@ -1,11 +1,9 @@
     <footer id="footer">
       <div class="wrapper">
-        
-          <p>&copy; <?= date('Y'); ?> - Tous droits réservés</p>
-        
-        <div>
-          <a href="https://fr.linkedin.com/in/alexandrabily" target="_blank" class="fa fa-linkedin"></a>
-        </div>
+        <ul class="footer-nav">
+          <li>&copy; <?= date('Y'); ?> - Tous droits réservés</li>
+          <li><a href="https://fr.linkedin.com/in/alexandrabily" target="_blank" class="fa fa-linkedin"></a></li>
+        </ul>
       </div>
     </footer>
   </body>
