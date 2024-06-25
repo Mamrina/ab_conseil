@@ -1,3 +1,4 @@
+/****************************/
 /***** General sittings *****/
 * {
   box-sizing: border-box;
@@ -51,11 +52,12 @@ h3 {
   margin-right: 10px;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
+  border-radius: 30px;
 }
 
 .button:hover {
   color: #3e467f;
-  background-color: #cbcbe1;
+  background-color: #e6e6e6;
 }
 
 .home-return {
@@ -64,8 +66,38 @@ h3 {
   text-decoration: underline;
 }
 
+.hidden {
+  display: none;
+}
+
+#mapid {
+  width: 100%;
+  height: 500px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#strong {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#strong strong {
+  font-weight: bold;
+}
+
+
 /******************/
 /***** HEADER *****/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Gardez l'en-tête au-dessus des autres contenus */
+  background: #fff; /* Assurez-vous que l'en-tête n'est pas transparent */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optionnel : ajoute une ombre pour mieux distinguer l'en-tête */
+}
 
 #header {
   display: flex;
@@ -84,6 +116,11 @@ h3 {
 
 .header-nav li {
   margin-right: 50px;
+  transition: transform 0.3s ease;
+}
+
+.header-nav li:hover {
+  transform: scale(1.1);
 }
 
 .header-nav li:last-child {
@@ -284,7 +321,31 @@ h3 {
   text-align: center;
 }
 
+.title-new {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  /* margin-bottom: 20px; */
+}
+
 .mini {
   font-size: 0.8rem;
   font-style: italic;
+}
+
+.news {
+  border-bottom: 2px solid #3e467f;
+  margin-top: 50px;
+}
+
+.news:first-child {
+  margin-top: 0;
+}
+
+.news:last-child {
+  border-bottom: none;
+}
+
+#show-more {
+  border: none;
 }

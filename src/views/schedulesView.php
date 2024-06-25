@@ -7,8 +7,8 @@
   <section class="wrapper">
     <a class="home-return" href="<?= $router->generate('home'); ?>">Retour à l'accueil</a>
     <div class="background-text">
-      <div class="formatting-text">
-        <p>Pour toute demande de renseignement, contacter moi au 06 27 07 05 05 ou abily@alexandrabilyconseil.com</p>
+      <div id="strong">
+      <p>Pour toute demande de renseignement, contacter moi au <strong>06 27 07 05 05</strong> ou <strong><a href="mailto:abily@alexandrabilyconseil.com">abily@alexandrabilyconseil.com</a></strong></p>
       </div>
       <div class="schedule-location">
         <div class="formatting-text">
@@ -27,10 +27,16 @@
         </div>
         <div class="formatting-text">
           <p class="bold-italic animate__animated animate__slideInRight">Localisation</p>
-          <p>Urrugne, Hendaye, Ascain, Tarnos. <br>En distanciel, en France et à l'internationale.</p>
+          <p><i class="fas fa-map-marker-alt"></i> Tarnos</p>
+          <address>
+          Pôle de Services Jean Bertin<br>
+          3 rue Hélène Boucher<br>
+          40220 TARNOS
+          </address>
         </div>
       </div>
-    </div> 
+      <div id="mapid" style="height: 300px;"></div>
+    </div>
   </section>
 </main>
 
