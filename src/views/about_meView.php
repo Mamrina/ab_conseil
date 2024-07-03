@@ -1,6 +1,9 @@
 <?php get_header('Qui suis-je ?', 'public'); ?>
 
 <main>
+<div id="block-about">
+    <h3>Qui suis-je ?</h3>
+  </div>
   <div class="img-ab" id="picture-cover">
     <img src="./images/picture_alexandra_bily.png" alt="Portrait de Alexandra Bily">
   </div>
@@ -9,8 +12,8 @@
     <div class="background-text">
       <div class="formatting-text">
         <p class="bold-italic  animate__animated animate__slideInLeft">À propos…</p>
-        <p><?= htmlspecialchars($aboutMeData['about_me']); ?></p>
-        <p><?= htmlspecialchars($aboutMeData['about_me_2']); ?></p>
+        <p><?= htmlentities($aboutMeData['about_me']); ?></p>
+        <p><?= htmlentities($aboutMeData['about_me_2']); ?></p>
       </div>
     </div>
     <div class="button-center">

@@ -21,9 +21,9 @@ require SRC . 'routes/admin.php';
 require SRC . 'routes/public.php';
 
 $match = $router->match();
-// dump($match);
 
 require SRC . 'includes/functions.php';
+logoutTimer();
 
 if (!empty($match['target'])) {
   $_GET = array_merge($_GET, $match['params']);

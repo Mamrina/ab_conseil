@@ -8,7 +8,7 @@
     <a class="home-return" href="<?= $router->generate('home'); ?>">Retour à l'accueil</a>
     <div class="background-text">
       <div id="strong">
-      <p>Pour toute demande de renseignement, contacter moi au <strong>06 27 07 05 05</strong> ou <strong><a href="mailto:abily@alexandrabilyconseil.com">abily@alexandrabilyconseil.com</a></strong></p>
+      <p>Pour toute demande de renseignement, contacter moi au <strong>06 27 07 05 05</strong> ou par email <strong><a href="mailto:marina.coldeboeuf@gmail.com">abily@alexandrabilyconseil.com</a></strong></p>
       </div>
       <div class="schedule-location">
         <div class="formatting-text">
@@ -16,11 +16,11 @@
           <ul>
             <?php foreach ($schedules as $schedule): ?>
               <li>
-                <p><?= htmlspecialchars($schedule['week_day']) . ' : 
-                ' . htmlspecialchars($schedule['morning_opening']) . ' - 
-                ' . htmlspecialchars($schedule['morning_close']); ?> et 
-                <?= htmlspecialchars($schedule['opening_afternoon']) . ' - 
-                ' . htmlspecialchars($schedule['closing_afternoon']); ?></p>
+                <p><?= htmlentities($schedule['week_day']) . ' : 
+                ' . htmlentities($schedule['morning_opening']) . ' - 
+                ' . htmlentities($schedule['morning_close']); ?> et 
+                <?= htmlentities($schedule['opening_afternoon']) . ' - 
+                ' . htmlentities($schedule['closing_afternoon']); ?></p>
               </li>
             <?php endforeach; ?>
           </ul>

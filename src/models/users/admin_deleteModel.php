@@ -46,11 +46,11 @@ function countUsers()
 {
   try {
     global $db;
-  $sql = 'SELECT COUNT(*) FROM users';
-  $query = $db->prepare($sql);
-  $query->execute();
+    $sql = 'SELECT COUNT(*) FROM users';
+    $query = $db->prepare($sql);
+    $query->execute();
 
-  return $query->fetchColumn();
+    return $query->fetchColumn();
   } catch (PDOException $e) {
     if ($_ENV['DEBUG'] == 'true') {
       dump($e->getMessage());

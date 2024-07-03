@@ -1,7 +1,6 @@
 <?php get_header('Mon compte utilisateur', 'admin'); ?>
 
 <div class="container mb-4">
-  <?= displayAlert(); ?>
   <div class="mb-5">
     <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
   </div>

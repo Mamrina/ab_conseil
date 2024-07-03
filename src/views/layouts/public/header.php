@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/ab_conseil.ico" type="image/x-icon">
   <title><?= $title; ?> | Alexandra Bily Conseil</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -32,6 +33,11 @@
             <a href="<?= $router->generate('news'); ?>">Actualités</a>
           </li>
         </ul>
+        <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       </nav>
     </div>
   </header>

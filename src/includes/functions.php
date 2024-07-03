@@ -66,3 +66,25 @@ function checkAdmin(array $match, AltoRouter $router)
     die;
   }
 }
+
+function logoutTimer ()
+{
+	global $router;
+
+	if (!empty($_SESSION['user']['last_login'])) {
+    dump($_SESSION['user']['last_login']);
+		$expireHour = 1;
+
+		$now = new DateTime();
+		$now->setTimezone(new DateTimeZone('Europe/Paris'));
+
+		$lastLogin = new DateTime($_SESSION['user']['last_login']);
+
+		if ($now->diff($lastLogin)->h >= $expireHour) {
+			unset($_SESSION['user']);
+			alert('Vous avez été déconnectée pour inactivité', 'danger');
+			header('Location: ' . $router->generate('login'));
+			die;
+		}
+	}
+}

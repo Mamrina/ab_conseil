@@ -8,7 +8,7 @@ displayAlert()
     <ul class="list-unstyled">
       <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('users'); ?>">Mon compte</a></li>
       <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('listServices'); ?>">Mes services</a></li>
-      <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('listSchedules'); ?>">Horaires et Contact</a></li>
+      <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('listSchedules'); ?>">Horaires</a></li>
       <li class="mb-3"><a class="text-decoration-none" href="<?= $router->generate('listNews'); ?>">Actualités</a></li>
   </ul>
   </nav>

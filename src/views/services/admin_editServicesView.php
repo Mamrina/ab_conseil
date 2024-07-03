@@ -1,5 +1,4 @@
 <?php get_header('Editer un service', 'admin'); ?>
-<?= displayAlert(); ?>
 
 <div class="container mb-4">
     <form action="" method="post" class="form-signin w-100 m-auto" enctype="multipart/form-data">

@@ -1,6 +1,6 @@
 <?php
 
-// Déclaration message d'erreur
+// Errors messages declaration
 $errorsMessageService = [
   'title' => false,
   'description' => false,
@@ -10,7 +10,6 @@ $errorsMessageService = [
 ];
 
 if (!empty($_POST)) {
-  // Rules for service title field
   if (!empty($_POST['title'])) {
     if (checkExistServices($_POST['title'])) {
       $errorsMessageService['title'] = 'Ce service existe déjà !';
@@ -25,17 +24,17 @@ if (!empty($_POST)) {
       if (!empty($_GET['id'])) {
         updateService('Le service a bien été modifié.');
       } else {
-        addService();
+        addService('Le service a bien été ajouté.');
       }
       // Redirect to services list
       alert('Le service a bien été ajouté.', 'success');
-      header('Location: ' . $router->generate('listServices'));
+      header('Location: ' . $router->generate('dashboard'));
     } else {
       alert('Ce service existe déjà. Ajout interrompu.', 'danger');
     }
   } else {
     alert('Merci de remplir tous les champs obligatoires.', 'danger');
   }
-} else if (!empty($_GET['id'])) { // Le film reste dans le champs
+} else if (!empty($_GET['id'])) {
   $_POST = (array) getService();
 }

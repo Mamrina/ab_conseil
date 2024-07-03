@@ -11,11 +11,11 @@
         <ul>
           <?php foreach ($services as $index => $service): ?>
             <li class="services">
-              <h3 class="title-service  animate__animated animate__slideInLeft"><?= htmlspecialchars($service['title']); ?></h3>
-              <p><?= htmlspecialchars($service['description']); ?></p>
-              <p>Durée : <?= htmlspecialchars($service['duration']); ?></p>
-              <p>Tarif : <?= htmlspecialchars($service['rates']); ?></p>
-              <p>Lieu : <?= htmlspecialchars($service['location']); ?></p>
+              <h3 class="title-service  animate__animated animate__slideInLeft"><?= htmlentities($service['title']); ?></h3>
+              <p><?= htmlentities($service['description']); ?></p>
+              <p>Durée : <?= htmlentities($service['duration']); ?></p>
+              <p>Tarif : <?= htmlentities($service['rates']); ?></p>
+              <p>Lieu : <?= htmlentities($service['location']); ?></p>
             </li>
           <?php endforeach; ?>
         </ul>

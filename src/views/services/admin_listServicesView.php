@@ -1,5 +1,5 @@
 <?php get_header('Liste des services', 'admin'); ?>
-
+<?php displayAlert(); ?>
 <div class="container mb-4">
   <div>
     <a href="<?= $router->generate('dashboard'); ?>" class="mb-5">Retour</a>

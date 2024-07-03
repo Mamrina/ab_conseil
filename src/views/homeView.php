@@ -29,7 +29,7 @@
   </section>
   <section class="wrapper">
     <div class="formatting-text block-color">
-      <h3 class="bold-italic">Accessibilité aux personnes handicapées</h3>
+      <h3 class="bold-italic accessibility">Accessibilité aux personnes handicapées</h3>
       <p>Toute personne doit pouvoir être en mesure d'effectuer un bilan de compétences quelle que soit sa situation. Il nous appartient d’envisager ensemble les mesures nécessaires en lien avec les organismes spécialisés (l’Agefiph et Cap Emploi) pour aménager au mieux la démarche. . Pour toute demande, merci de contacter notre référente handicap au 05 59 74 84 10 ou par courriel : contact@interstices-sud-aquitaine.fr</p>
     </div>
   </section>
