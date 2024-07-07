@@ -2,7 +2,7 @@
 <main>
   <section>
     <div class="img-rhune" id="title-cover">
-      <img src="../images/vue_sur_la_rhune.jpg" alt="Vue sur la Rhune">
+      <img src="./assets/images/vue_sur_la_rhune.jpg" alt="Vue sur la Rhune">
       <div class="text-over-image">
         <h1>Alexandra Bily Conseil</h1>
         <h2>Consultante RH</h2>
@@ -25,6 +25,7 @@
     </div>
       <div class="button-center">
         <a class="button animate__animated animate__fadeInUp" href="<?= $router->generate('services'); ?>">mes services</a>
+        <a class="button animate__animated animate__fadeInUp" href="<?= $router->generate('schedules'); ?>">me contacter</a>
       </div>
   </section>
   <section class="wrapper">

@@ -18,8 +18,8 @@
             <p class="title-new animate__animated animate__slideInLeft"><?= htmlentities($new['title']); ?></p>
             <p><?= htmlentities($new['content']); ?></p>
             <p class="mini">
-              Posté le <?= (new DateTime($new['created_at']))->format('d/m/Y H:i'); ?>,
-              modifié le <?= (new DateTime($new['modified_at']))->format('d/m/Y H:i'); ?>
+            Posté le <?= date('d/m/Y H:i', strtotime($new['created_at'])); ?>,
+            modifié le <?= date('d/m/Y H:i', strtotime($new['modified_at'])); ?>
             </p>
           </li>
         <?php endforeach; ?>

@@ -28,7 +28,8 @@ if (!empty($_POST)) {
       }
       // Redirect to services list
       alert('Le service a bien été ajouté.', 'success');
-      header('Location: ' . $router->generate('dashboard'));
+      header('Location: ' . $router->generate('listServices'));
+      die;
     } else {
       alert('Ce service existe déjà. Ajout interrompu.', 'danger');
     }

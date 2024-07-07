@@ -3,7 +3,6 @@
 
 <div class='d-flex align-items-center mt-5'>
   <form action="" method="POST" class="form-signin m-auto">
-    <img src="" alt="">
     <h3 class="mb-3 text-center">Se connecter</h3>
     <div class="form-floating mb-3">
       <?php $error = checkEmptyFields('email'); ?>
@@ -19,7 +18,7 @@
     </div>
     <div class="d-none form-floating mb-3">
       <input type="text" name="firstname">
-      <label for="name">Prénom</label>
+      <label for="floatingInput">Prénom</label>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit">Connexion</button>
     <p class="mt-4 mb-3 text-body-secondary text-center">
@@ -29,3 +28,5 @@
 </div>
 
 <?php get_footer('login'); ?>
+
+

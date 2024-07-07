@@ -372,6 +372,19 @@ header {
   text-align: right;
 }
 
+/************************/
+/***** LEGAL NOTICE *****/
+
+#block-legal-notice {
+  background-color: #3e467f;
+  color: #f7f1f1;
+  text-transform: uppercase  ;
+  padding: 50px 0;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  text-align: center;
+}
+
 /******************/
 /***** FOOTER *****/
 
@@ -389,9 +402,13 @@ header {
   justify-content: space-between;
 }
 
+.footer-nav a {
+  color: #fff;
+}
+
 .fa {
   font-size: 16px;
-  color: #f4eeee;
+  color: #fff;
 }
 
 /*****************************/

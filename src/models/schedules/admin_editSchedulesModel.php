@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Check if the service already exists in the database
  */

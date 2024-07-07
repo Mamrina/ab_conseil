@@ -14,6 +14,7 @@ function deletePosts()
     alert('L\'article a bien été supprimé.', 'success');
   } catch (PDOException $e) {
     if ($_ENV['DEBUG'] == 'true') {
+      dump($e->getMessage());
       die;
     } else {
       alert('Une erreur est survenue. Merci de réessayer plus tard.' . 'danger');

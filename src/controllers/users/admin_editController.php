@@ -45,9 +45,9 @@ if (!empty($_POST)) {
       if (!empty($_GET['id'])) {
         updateUser('Vos modifications ont bien étés prises en compte.', 'success');
       } 
-      // else {
-      //   addUser('Un utilisateur a bien été ajouté.');
-      // }
+      else {
+        addUser('Un utilisateur a bien été ajouté.');
+      }
       header('Location: ' . $router->generate('users'));
       die;
     } else {

@@ -9,11 +9,11 @@ function deleteUser()
     $sql = 'DELETE FROM users WHERE id = :id';
     $query = $db->prepare($sql);
     $query->execute(['id' => $_GET['id']]);
-    // dump($_GET['id']);
     alert('L\'utilisateur a bien été supprimé.', 'success');
   } catch (PDOException $e) {
       if ($_ENV['DEBUG'] == 'true') {
-      die;
+        dump($e->getMessage());
+        die;
     } else {
       alert('Une erreur est survenue. Merci de réessayer plus tard.', 'danger');
     }

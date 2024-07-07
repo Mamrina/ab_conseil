@@ -4,5 +4,5 @@ if (!empty($_GET['id']) && !empty(checkExistServices()->id)) {
 } else {
   alert('Impossible de supprimer ce service.', 'danger');
 }
-header('Location: ' . $router->generate('dashboard'));
+header('Location: ' . $router->generate('listServices'));
 die;

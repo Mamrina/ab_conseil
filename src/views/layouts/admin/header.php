@@ -9,9 +9,9 @@
 </head>
 <body>
   <header>
-  <nav class="navbar navbar-expand-lg mb-4" data-bs-theme="dark" style="background: #3e467f;" >
+  	<nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background: #3e467f;" >
 			<div class="container">
-				<a class="navbar-brand" href="<?= $router->generate('dashboard'); ?>">Tableau de bord - AB Conseil</a>
+				<a class="navbar-brand" href="<?= $router->generate('dashboard'); ?>">Tableau de bord | AB Conseil</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>

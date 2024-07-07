@@ -11,24 +11,24 @@ $errorsMessageService = [
 
 if (!empty($_POST)) {
   if (!empty($_POST['week_day'])) {
-      if (checkExistSchedules($_POST['week_day'])) {
-          $errorsMessageService['week_day'] = 'Cet horaire existe déjà !';
-      }
+    if (checkExistSchedules($_POST['week_day'])) {
+      $errorsMessageService['week_day'] = 'Cet horaire existe déjà !';
+    }
   } else {
-      $errorsMessageService['week_day'] = 'Le champ du titre est obligatoire.';
+    $errorsMessageService['week_day'] = 'Le champ du titre est obligatoire.';
   }
 
   // Save services in database
   if (!empty($_POST['week_day']) && !empty($_POST['morning_opening']) && !empty($_POST['morning_close']) && !empty($_POST['opening_afternoon']) && !empty($_POST['closing_afternoon'])) {
     if (!array_filter($errorsMessageService)) {
       if (!empty($_GET['id'])) {
-        updateSchedule('L\horaire a bien été modifié.');
+        updateSchedule('L\'horaire a bien été modifié.');
       } else {
-        addSchedule();
+        addSchedule('L\'horaire a bien été ajouté.');
       }
       // Redirect to services list
-      alert('L\horaire a bien été ajouté.', 'success');
       header('Location: ' . $router->generate('listSchedules'));
+      alert('L\'horaire a bien été ajouté.', 'success');
     } else {
       alert('Cet horaire existe déjà. Ajout interrompu.', 'danger');
     }

@@ -16,7 +16,7 @@ function limitAttemps()
 			unset($_SESSION['attemps']);
 		} else {
 			alert('Trop de tentatives, veuillez réessayer dans 5 minutes');
-			header('Location: ' . $router->generate('login'));
+			header('Location: ' . $router->generate('home'));
 			die;
 		}
 	} else {
@@ -27,22 +27,24 @@ function limitAttemps()
 		} else if ($_SESSION['attemps']['count'] >= 5) {
 			$date = new DateTimeImmutable();
 			$_SESSION['attemps']['time'] = $date->getTimestamp();
+      //date d'expiration
 		}
 	}
 }
 
-// Honeypot
-$honeypot = false;
 
+/**
+ * Check connection admin with email and password
+ * and verify if the admin is not a spam robot
+*/
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!empty($_POST['firstname'])) {
-    $honeypot = true;
-    alert('Accès refusé.', 'danger');
-    header('Location: ' . $router->generate('login'));
+    alert('Bravo, vous êtes connecté !', 'success');
+    header('Location: ' . $router->generate('home'));
     die;
   }
 
-  if (!empty($_POST['email']) && !empty($_POST['pwd']) && empty($_POST['firstname'])) {
+  if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
     $accessUser = checkUserAccess();
     if (!empty($accessUser)) {
       $_SESSION['users'] = [

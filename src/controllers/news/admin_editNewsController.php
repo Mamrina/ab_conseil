@@ -22,16 +22,16 @@ if (!empty($_POST)) {
       if (!empty($_GET['id'])) {
         updatePost('L\'article a bien été modifié.');
       } else {
-        addPost();
+        addPost('L\'article a bien été ajouté.');
       }
       // Redirect to news list
-      alert('L\'article a bien été ajouté.', 'success');
       header('Location: ' . $router->generate('listNews'));
+      alert('L\'article a bien été ajouté.', 'success');
     } else {
       alert('Cet article existe déjà. Ajout interrompu.', 'danger');
     }
   } else {
-      alert('Merci de remplir tous les champs obligatoires.', 'danger');
+    alert('Merci de remplir tous les champs obligatoires.', 'danger');
   }
 } else if (!empty($_GET['id'])) {
     $_POST = (array) getPost();

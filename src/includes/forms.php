@@ -4,7 +4,7 @@
  * Check if a field is empty
  * @param string $field
  * @param string $message
- * @return arry
+ * @return array
  */
 // Check fields email and password
 function checkEmptyFields($field, $message = 'Veuillez renseigner cette information')

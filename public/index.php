@@ -26,6 +26,7 @@ require SRC . 'includes/functions.php';
 logoutTimer();
 
 if (!empty($match['target'])) {
+  checkAdmin($match, $router);
   $_GET = array_merge($_GET, $match['params']);
   $data = [];
   require SRC . 'models/' . $match['target'] . 'Model.php';

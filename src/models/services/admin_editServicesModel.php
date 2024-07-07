@@ -25,11 +25,12 @@ function addService(): bool
     'description' => $_POST['description'],
     'duration' => $_POST['duration'],
     'rates' => $_POST['rates'],
-    'location' => $_POST['location']
+    'location' => $_POST['location'],
+    'created_at' => date('Y-m-d H:i:s')
   ];
 
   try {
-    $sql = 'INSERT INTO services (title, description, duration, rates, location) VALUES (:title, :description, :duration, :rates, :location)';
+    $sql = 'INSERT INTO services (title, description, duration, rates, location, created_at) VALUES (:title, :description, :duration, :rates, :location, :created_at)';
     $query = $db->prepare($sql);
     $query->execute($data);
   } catch (PDOException $e) {
@@ -49,11 +50,12 @@ function updateService(string $message)
     'duration' => $_POST['duration'],
     'rates' => $_POST['rates'],
     'location' => $_POST['location'],
+    'modified_at' => date('Y-m-d H:i:s'),
     'id' => $_GET['id']
   ];
 
   try {
-    $sql = 'UPDATE services SET title = :title, description = :description, duration = :duration, rates = :rates, location = :location WHERE id = :id';
+    $sql = 'UPDATE services SET title = :title, description = :description, duration = :duration, rates = :rates, location = :location, modified_at = :modified_at WHERE id = :id';
     $query = $db->prepare($sql);
     $query->execute($data);
   } catch (PDOException $e) {
@@ -71,7 +73,7 @@ function getService()
   global $db;
 
   try {
-    $sql = 'SELECT title, description, duration, rates, location FROM services WHERE id = :id';
+    $sql = 'SELECT title, description, duration, rates, location, created_at, modified_at FROM services WHERE id = :id';
     $query = $db->prepare($sql);
     $query->execute(['id' => $_GET['id']]);
 

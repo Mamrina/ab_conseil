@@ -1,12 +1,10 @@
 <?php get_header('Liste des articles de Blog', 'admin'); ?>
-
+<?php displayAlert(); ?>
 <div class="container mb-4">
-  <div class="mb-4">
+  <div class="mb-4 mt-5">
     <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
   </div>
-  <div class="mb-4">
-    <h3>Liste des articles</h3>
-  </div>
+  <h3 class="mt-5 text-center fs-1">Liste des articles</h3>
   <div class="mb-4">
     <a href="<?= $router->generate('addNew'); ?>" class="btn btn-success">Ajouter un nouvel article</a>
   </div>

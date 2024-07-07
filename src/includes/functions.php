@@ -61,27 +61,30 @@ function displayAlert(): void
 function checkAdmin(array $match, AltoRouter $router)
 {
   $existAdmin = strpos($match['target'], 'admin_');
-  if ($existAdmin !== false && empty($_SESSION['user']['id'])) {
+  if ($existAdmin !== false && empty($_SESSION['users']['id'])) {
     header('Location: ' . $router->generate('login'));
     die;
   }
 }
 
-function logoutTimer ()
+function logoutTimer()
 {
 	global $router;
 
-	if (!empty($_SESSION['user']['last_login'])) {
-    dump($_SESSION['user']['last_login']);
-		$expireHour = 1;
+	if (!empty($_SESSION['users']['last_login'])) {
+		$expireMinutes = 10;
 
 		$now = new DateTime();
 		$now->setTimezone(new DateTimeZone('Europe/Paris'));
 
-		$lastLogin = new DateTime($_SESSION['user']['last_login']);
+		$lastLogin = new DateTime($_SESSION['users']['last_login']);
 
-		if ($now->diff($lastLogin)->h >= $expireHour) {
-			unset($_SESSION['user']);
+		// Calculer la différence en minutes
+		$diff = $now->diff($lastLogin);
+		$diffMinutes = ($diff->h * 60) + $diff->i;
+
+		if ($diffMinutes >= $expireMinutes) {
+			unset($_SESSION['users']);
 			alert('Vous avez été déconnectée pour inactivité', 'danger');
 			header('Location: ' . $router->generate('login'));
 			die;

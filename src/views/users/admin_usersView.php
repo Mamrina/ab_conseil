@@ -1,7 +1,7 @@
 <?php get_header('Mon compte utilisateur', 'admin'); ?>
 
 <div class="container mb-4">
-  <div class="mb-5">
+  <div class="mb-5 mt-5">
     <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
   </div>
   <div class="mb-5 mt-5">
@@ -18,7 +18,6 @@
       <div><strong>Plus d'infos :</strong> <?= nl2br(htmlentities($user->about_me_2)); ?></div>
       <div class="action-buttons mt-2">
         <a class="btn btn-warning" href="<?= $router->generate('editUser', ['id' =>  htmlentities($user->id)]); ?>">Editer</a>
-        <a class="btn btn-danger" href="<?= $router->generate('deleteUser', ['id' =>  htmlentities($user->id)]); ?>">Supprimer</a>
       </div>
     </div>
   <?php } ?>

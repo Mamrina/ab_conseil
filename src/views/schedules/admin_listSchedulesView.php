@@ -1,11 +1,10 @@
 <?php get_header('Liste des horaires et contact', 'admin'); ?>
+<?php displayAlert(); ?>
 <div class="container mb-4">
   <div class="mt-5">
     <a href="<?= $router->generate('dashboard'); ?>">Retour</a>
   </div>
-  <div class="mt-5">
-    <h3>Liste des horaires</h3>
-  </div>
+  <h3 class="mt-5 text-center fs-1">Liste des horaires</h3>
   <div class="mt-5">
     <a href="<?= $router->generate('addSchedule'); ?>" class="btn btn-success">Ajouter un nouvel horaire</a>
   </div>

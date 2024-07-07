@@ -1,6 +1,6 @@
 <?php get_header('Editer les horaires', 'admin'); ?>
 
-<div class="container mb-4">
+<div class="container mb-4 mt-4">
   <form action="" method="post" class="form-signin w-100 m-auto" enctype="multipart/form-data">
     <h3 class="mb-5 fw-normal text-center">Ajouter un horaire</h3>
     <div class="form-floating mb-3">

@@ -5,7 +5,7 @@
     <h3>Qui suis-je ?</h3>
   </div>
   <div class="img-ab" id="picture-cover">
-    <img src="./images/picture_alexandra_bily.png" alt="Portrait de Alexandra Bily">
+    <img src="./assets/images/picture_alexandra_bily.png" alt="Portrait de Alexandra Bily">
   </div>
   <section class="wrapper">
     <a class="home-return" href="<?= $router->generate('home'); ?>">Retour à l'accueil</a>

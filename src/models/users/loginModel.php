@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Verification of a user's access details with email and password
  */
 function checkUserAccess()
 {
@@ -12,13 +12,14 @@ function checkUserAccess()
 
     $user = $query->fetch();
 
-    if (password_verify($_POST['pwd'], $user->pwd)) {
+    if ($user && password_verify($_POST['pwd'], $user->pwd)) {
       return $user;
     } else {
       return false;
     }
   } catch (PDOException $e) {
     if ($_ENV['DEBUG'] == 'true') {
+      dump($e->getMessage());
       die;
     } else {
       alert('Une erreur est survenue. Merci de réessayer plus tard.' . 'danger');
@@ -27,7 +28,7 @@ function checkUserAccess()
 }
 
 /**
- * 
+ * Update last_login user in database
  */
 function saveLastLogin(string $userId)
 {
@@ -39,6 +40,7 @@ function saveLastLogin(string $userId)
     alert('Le mot de passe a bien été sauvegardé.', 'success');
 } catch (PDOException $e) {
     if ($_ENV['DEBUG'] == 'true') {
+      dump($e->getMessage());
       die;
     } else {
       alert('Une erreur est survenue. Merci de réessayer plus tard.' . 'danger');
