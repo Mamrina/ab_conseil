@@ -27,8 +27,9 @@ if (!empty($_POST)) {
         addSchedule('L\'horaire a bien été ajouté.');
       }
       // Redirect to services list
-      header('Location: ' . $router->generate('listSchedules'));
       alert('L\'horaire a bien été ajouté.', 'success');
+      header('Location: ' . $router->generate('listSchedules'));
+      die;
     } else {
       alert('Cet horaire existe déjà. Ajout interrompu.', 'danger');
     }

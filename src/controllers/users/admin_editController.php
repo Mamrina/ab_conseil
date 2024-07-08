@@ -6,6 +6,7 @@
  */
 function checkEmail (string $email): bool
 {
+  // Check if the email is valid 
 	return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
@@ -31,6 +32,7 @@ if (!empty($_POST)) {
   }
 
   if (!empty($_POST['pwd'])) {
+    // Check if is string with one minimum lowercase, one minimum uppercase, one minimum special character and 12 minimum characters
     $regex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{12,}$/';
     if (!preg_match($regex, $_POST['pwd'])) {
       $errorsMessage['pwd'] = 'Merci de respecter le format indiqué.';
@@ -48,6 +50,7 @@ if (!empty($_POST)) {
       else {
         addUser('Un utilisateur a bien été ajouté.');
       }
+      alert('L\'utilisateur a bien été ajouté.', 'success');
       header('Location: ' . $router->generate('users'));
       die;
     } else {

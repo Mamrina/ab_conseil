@@ -8,7 +8,9 @@
     <a class="home-return" href="<?= $router->generate('home'); ?>">Retour à l'accueil</a>
     <div class="background-text">
       <div id="strong">
-      <p>Pour toute demande de renseignement, contacter moi au <strong>06 27 07 05 05</strong> ou par email <strong><a href="mailto:marina.coldeboeuf@gmail.com">abily@alexandrabilyconseil.com</a></strong></p>
+      <p>Pour toute demande de renseignement, contacter moi au <strong>06 27 07 05 05</strong> ou par email <strong>
+        <a href="mailto:marina.coldeboeuf@gmail.com">abily@alexandrabilyconseil.com</a></strong>
+      </p>
       </div>
       <div class="schedule-location">
         <div class="formatting-text">

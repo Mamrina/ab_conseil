@@ -37,14 +37,14 @@ function addUser(string $message)
     'about_me_2' => $_POST['about_me_2'],
     'email' => $_POST['email'],
     'pwd' => password_hash($_POST['pwd'], PASSWORD_DEFAULT)
-];
+  ];
 
-try {
-  $sql = 'INSERT INTO users (firstname, name, phone, about_me, about_me_2, email, pwd) VALUES (:firstname, :name, :phone, :about_me, :about_me_2, :email, :pwd)';
-  $query = $db->prepare($sql);
-  $query->execute($data);
-  alert($message, 'success');
-} catch (PDOException $e) {
+  try {
+    $sql = 'INSERT INTO users (firstname, name, phone, about_me, about_me_2, email, pwd) VALUES (:firstname, :name, :phone, :about_me, :about_me_2, :email, :pwd)';
+    $query = $db->prepare($sql);
+    $query->execute($data);
+    alert($message, 'success');
+  } catch (PDOException $e) {
     if ($_ENV['DEBUG'] == 'true') {
       dump($e->getMessage());
       die;

@@ -6,3 +6,6 @@ if (!empty($_GET['id']) && !empty(checkExistServices()->id)) {
 }
 header('Location: ' . $router->generate('listServices'));
 die;
+
+
+

@@ -32,7 +32,6 @@ function limitAttemps()
 	}
 }
 
-
 /**
  * Check connection admin with email and password
  * and verify if the admin is not a spam robot
@@ -61,3 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
   }
 }
+
+
+
+
+
+
+
+
+

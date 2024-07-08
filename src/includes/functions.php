@@ -67,6 +67,9 @@ function checkAdmin(array $match, AltoRouter $router)
   }
 }
 
+/**
+ * Deconnection after 10 minutes of inactivity
+ */
 function logoutTimer()
 {
 	global $router;
@@ -85,7 +88,7 @@ function logoutTimer()
 
 		if ($diffMinutes >= $expireMinutes) {
 			unset($_SESSION['users']);
-			alert('Vous avez été déconnectée pour inactivité', 'danger');
+			alert('Vous avez été déconnectée pour inactivité !', 'danger');
 			header('Location: ' . $router->generate('login'));
 			die;
 		}

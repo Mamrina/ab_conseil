@@ -12,7 +12,7 @@
   crossorigin=""></script>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="icon" href="./images/ab_conseil.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/images/ab_conseil.ico" type="image/x-icon">
   <script src="https://kit.fontawesome.com/ad2e9db608.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>

@@ -25,8 +25,9 @@ if (!empty($_POST)) {
         addPost('L\'article a bien été ajouté.');
       }
       // Redirect to news list
-      header('Location: ' . $router->generate('listNews'));
       alert('L\'article a bien été ajouté.', 'success');
+      header('Location: ' . $router->generate('listNews'));
+      die;
     } else {
       alert('Cet article existe déjà. Ajout interrompu.', 'danger');
     }

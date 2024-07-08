@@ -16,8 +16,8 @@
       <p><strong>Durée :</strong> <?= htmlentities($service->duration); ?></p>
       <p><strong>Tarif :</strong> <?= htmlentities($service->rates); ?></p>
       <p><strong>Lieu :</strong> <?= htmlentities($service->location); ?></p>
-      <p><strong>Ajouté le :</strong> <?= date('d/m/Y', strtotime($service->created_at)); ?></p>
-      <p><strong>Modifié le :</strong> <?= date('d/m/Y', strtotime($service->modified_at)); ?></p>
+      <p><strong>Ajouté le :</strong> <?= date('d/m/Y H:i:s', strtotime($service->created_at)); ?></p>
+      <p><strong>Modifié le :</strong> <?= date('d/m/Y H:i:s', strtotime($service->modified_at)); ?></p>
       <div class="action-buttons mt-2">
         <a href="<?= $router->generate('editService', ['id' => htmlentities($service->id)]); ?>" class="btn btn-warning">Editer</a>
         <a href="<?= $router->generate('deleteService', ['id' => htmlentities($service->id)]); ?>" class="btn btn-danger">Supprimer</a>

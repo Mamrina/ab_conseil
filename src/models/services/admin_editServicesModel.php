@@ -15,7 +15,7 @@ function checkExistServices(): mixed
 }
 
 /**
- * Check a service in the database
+ * Add a service in the database
  */
 function addService(): bool
 {

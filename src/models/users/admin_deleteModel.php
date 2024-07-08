@@ -42,6 +42,9 @@ function getAlreadyExistId()
   }
 }
 
+/**
+ * Count the number of users in the database
+ */
 function countUsers()
 {
   try {
